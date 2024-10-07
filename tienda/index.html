@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda Online 2024</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function comprar(productoNombre) {
+            const mensaje = encodeURIComponent(`Deseo comprar el "${productoNombre}"`);
+            const numeroWhatsApp = "+51961479422"; // Cambia esto por tu número de WhatsApp
+            const enlace = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
+            
+            window.open(enlace, '_blank');
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -19,7 +28,7 @@
             </div>
             <h3 class="product-description">Lo entrego sin probar, hace tiempo que no lo uso.</h3>
             <p class="product-price">S/.30.00</p>
-            <button class="buy-btn">Comprar</button>
+            <button class="buy-btn" onclick="comprar('Procesador Core I5 4ta')">Comprar</button>
         </div>
 
         <div class="product">
@@ -27,10 +36,11 @@
             <div class="image-container">
                 <img src="producto2.jpg" alt="Producto 2" class="product-image">
             </div>
-            <h3 class="product-description">Es de segunda,core I5 de 4ta - 6gb de ram, el teclado no funciona, lo uso con teclado usb, incluye cargador</h3>
+            <h3 class="product-description">Es de segunda, core I5 de 4ta - 6gb de ram, el teclado no funciona, lo uso con teclado usb, incluye cargador</h3>
             <p class="product-price">S/.200.00</p>
-            <button class="buy-btn">Comprar</button>
+            <button class="buy-btn" onclick="comprar('Laptop ASUS A43E')">Comprar</button>
         </div>
     </div>
 </body>
 </html>
+
